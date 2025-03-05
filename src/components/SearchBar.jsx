@@ -1,4 +1,4 @@
-// import { useState, useEffect } from "react"
+// import { useState, useEffect } from "react" //* to=> GlobalContext
 import { useGlobalContext } from "../context/GlobalContext"
 
 
@@ -8,7 +8,7 @@ export default function SearchBar() {
     const { handleInputChange, handleSubmitChange } = useGlobalContext()
 
     //*cerca film da input
-    // const [searchMovie, setSearchMovie] = useState('')
+    // const [searchMovie, setSearchMovie] = useState('') //* to=> GlobalContext
 
 
     //todo customFunction per settare l'input searchMovie (=>onChange dell'input)
@@ -20,7 +20,7 @@ export default function SearchBar() {
     // const handleSubmitChange = () => {
     //     e.preventDefault()
     //     return axiosData()
-    // }
+    // } //* to=> GlobalContext
 
 
     return (
