@@ -9,12 +9,14 @@ import { GlobalProvider } from "./context/GlobalContext"
 function App() {
 
   return (
-    <GlobalProvider>
+    <>
+      <GlobalProvider>
 
-      <Header />
-      <Main />
+        <Header />
+        <Main />
 
-    </GlobalProvider>
+      </GlobalProvider>
+    </>
   )
 }
 

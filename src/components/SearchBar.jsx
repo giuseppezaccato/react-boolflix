@@ -1,30 +1,45 @@
+// import { useState, useEffect } from "react"
+import { useGlobalContext } from "../context/GlobalContext"
+
 
 export default function SearchBar() {
+
+    //task destructuring da GlobalContext
+    const { handleInputChange, handleSubmitChange } = useGlobalContext()
+
+    //*cerca film da input
+    // const [searchMovie, setSearchMovie] = useState('')
+
+
+    //todo customFunction per settare l'input searchMovie (=>onChange dell'input)
+    // const handleInputChange = (e) => {
+    //     e.preventDefault()
+    //     return (setSearchMovie(e.target.value))
+    // }
+
+    // const handleSubmitChange = () => {
+    //     e.preventDefault()
+    //     return axiosData()
+    // }
+
 
     return (
 
         <nav
-            class=" navbar navbar-expand-sm navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand text-danger fw-bold" href="#">BOOLFLIX</a>
-                <button
-                    class="navbar-toggler d-lg-none"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavId"
-                    aria-controls="collapsibleNavId"
-                    aria-expanded="false"
-                    aria-label="Toggle navigation"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <form class="d-flex my-2 my-lg-0">
+            className=" navbar navbar-expand-sm navbar-dark bg-dark">
+            <div className="container">
+                <a className="navbar-brand text-danger fw-bold" href="#">BOOLFLIX</a>
+
+                <div className="collapse navbar-collapse" id="collapsibleNavId">
+                    <form className="d-flex my-2 my-lg-0" onSubmit={handleSubmitChange}>
                         <input
-                            class="form-control me-sm-2"
+                            className="form-control me-sm-2"
                             type="text"
-                            placeholder="Search"
+                            placeholder="Cerca"
+                            onChange={handleInputChange}
+                        // value={searchMovie}
                         />
+
                         {/* //todo! select con input da passare come film/serieTV */}
                         {/* <select name="" id="">
                                 <option value="" ></option>
@@ -33,15 +48,15 @@ export default function SearchBar() {
                             </select> */}
 
                         <button
-                            class="btn btn-outline-success my-2 my-sm-0"
+                            className="btn btn-outline-success my-2 my-sm-0"
                             type="submit"
                         >
-                            Search
+                            Cerca
                         </button>
                     </form>
                 </div>
             </div>
-        </nav>
+        </nav >
 
     )
 
