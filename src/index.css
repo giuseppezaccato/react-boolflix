@@ -1,0 +1,40 @@
+.info {
+    color: white;
+    position: absolute;
+    display: none;
+    padding: 10px;
+    width: 100%;
+    top: 100px;
+    left: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+.carta:hover .info {
+    display: block;
+    padding: 10%;
+}
+
+.carta-img {
+    position: relative;
+    transition: opacity 0.3s ease;
+}
+
+.carta:hover .carta-img {
+    position: relative;
+    opacity: 0.2;
+}
+
+.carta {
+    position: relative;
+    overflow: hidden;
+    overflow-y: auto;
+    padding: 20px;
+}
